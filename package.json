@@ -2,17 +2,17 @@
   "name": "ghostly",
   "license": "MIT",
   "version": "0.0.0",
-  "types": "dist/index.d.ts",
+  "types": "dist/ghostly.d.ts",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/ghostly.umd.cjs",
-  "module": "./dist/ghostly.js",
+  "main": "./dist/ghostly.cjs.js",
+  "module": "./dist/ghostly.es.js",
   "exports": {
     ".": {
-      "import": "./dist/ghostly.js",
-      "require": "./dist/ghostly.umd.cjs"
+      "import": "./dist/ghostly.es.js",
+      "require": "./dist/ghostly.cjs.js"
     }
   },
   "scripts": {
@@ -47,7 +47,8 @@
     "tailwind-merge": "^1.12.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.4",
-    "vite": "^4.3.5"
+    "vite": "^4.3.5",
+    "vite-plugin-dts": "^2.3.0"
   },
   "browserslist": {
     "production": [

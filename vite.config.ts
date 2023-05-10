@@ -1,22 +1,25 @@
-import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { resolve } from 'path'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
+/** @type {import('vite').UserConfig} */
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "lib/index.tsx"),
-      name: "Ghostly",
-      fileName: (format) => `ghostly.${format}.tsx`,
+      entry: resolve(__dirname, 'lib/index.ts'),
+      name: 'Ghostly',
+      formats: ['es', 'cjs'],
+      fileName: 'ghostly'
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
-          react: "React",
-        },
-      },
-    },
+          react: 'React'
+        }
+      }
+    }
   },
-  plugins: [react()],
-});
+  plugins: [react(), dts()]
+})
