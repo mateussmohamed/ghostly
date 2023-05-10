@@ -1,0 +1,64 @@
+{
+  "name": "ghostly",
+  "license": "MIT",
+  "version": "0.0.0",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ghostly.umd.cjs",
+  "module": "./dist/ghostly.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ghostly.js",
+      "require": "./dist/ghostly.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "prerelease": "pnpm run build",
+    "release": "changeset publish",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "clsx": "^1.2.1",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.12.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.3.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
