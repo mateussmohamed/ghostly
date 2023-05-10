@@ -1,6 +1,10 @@
 {
   "name": "@mateussmohamed/ghostly",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateussmohamed/ghostly.git"
+  },
   "version": "1.0.0",
   "types": "dist/ghostly.d.ts",
   "type": "module",
