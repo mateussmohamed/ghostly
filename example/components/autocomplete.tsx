@@ -1,6 +1,6 @@
 import { useAutocomplete } from '../../lib'
-import colors from '../lib/colors'
-import { cn } from '../lib/utils'
+import colors from '../helpers/colors'
+import { cn } from '../helpers/utils'
 
 export function Autocomplete() {
   const {
