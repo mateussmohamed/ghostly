@@ -1,5 +1,5 @@
 {
-  "name": "ghostly",
+  "name": "@mateussmohamed/ghostly",
   "license": "MIT",
   "version": "1.0.0",
   "types": "dist/ghostly.d.ts",
@@ -61,5 +61,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
