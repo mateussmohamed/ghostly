@@ -23,6 +23,7 @@
     "dev": "vite --config vite.config.lib.ts",
     "build:lib": "vite build --config vite.config.lib.ts",
     "build:docs": "npm-run-all build:lib && vite build --config vite.config.docs.ts",
+    "build:all": "npm-run-all build:lib build:docs",
     "preview": "vite preview --config vite.config.docs.ts",
     "preview:docs": "npm-run-all build:lib build:docs preview",
     "test": "vitest run",
