@@ -2,7 +2,9 @@ name: CI
 on:
   push:
     branches:
-      - "**"
+      - '**'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
@@ -15,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint && pnpm run build
