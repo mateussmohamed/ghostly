@@ -1,5 +1,0 @@
----
-'ghostly': major
----
-
-Add useAutocomplete
