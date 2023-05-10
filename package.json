@@ -63,6 +63,7 @@
     ]
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "@mateussmohamed:registry": "https://npm.pkg.github.com"
   }
 }
